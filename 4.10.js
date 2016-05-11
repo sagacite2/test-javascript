@@ -21,17 +21,23 @@ test.get('/')
     .expect('我是首页')//这句测试能通过吗？为什么？
     .expect('Content-Type', /text/)//这句测试能通过吗？为什么？
     .end(function (err, res) {
-        if (err) throw err;
+        if (err) {
+            console.log(err.message);
+        }
     });
 test.get('/user')
     .expect('Content-Type', /json/) //这句测试能通过吗？为什么？
     .expect(200) //这句测试能通过吗？为什么？
     .expect({ name: '赵本山' })//这句测试能通过吗？为什么？
     .end(function (err, res) {
-        if (err) throw err;
+        if (err) {
+            console.log(err.message);
+        }
     });
 test.get('/other')
     .expect(200)//这句测试能通过吗？为什么？
     .end(function (err, res) {
-        if (err) throw err;
+        if (err) {
+            console.log(err.message);
+        }
     });
