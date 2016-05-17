@@ -6,6 +6,7 @@
     "express": "^4.13.4",
     "supertest": "^1.2.0",
     "mongoose": "^4.4.16",
-    "async": "^2.0.0-rc.4"
+    "async": "^2.0.0-rc.4",
+    "eventproxy": "^0.3.4"
   }
 }
