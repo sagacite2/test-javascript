@@ -11,3 +11,9 @@ function add(x) {
 const add = x => y => x + y;
 //请问 => 这个符号是什么意思？
 
+//下面的写法是不行的，为什么？应该怎么修改？
+function add(x) {
+    return (function (y) {
+        return x + y;
+    })(y);
+}

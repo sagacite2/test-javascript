@@ -1,24 +1,18 @@
-//此题2分
-//任何循环都可以写成递归，任何递归都可以写成循环
-//实际上，任何递归也可以写成信号传递和监听的模式
-//请解释一下下面代码干了什么？
+//编码规范
 
-var eventproxy = require('eventproxy');
-var test = function (callback) {
-    var ep = new eventproxy();
-    var i = 10;
-    var sum = 0;
-    ep.on('signal', function () {
-        sum += i;
-        i--;
-        if (i > 0) {
-            ep.emit('signal');
-        } else {
-            callback(sum);
-        }
-    });
-    ep.emit('signal');
+//以下代码你能读懂是什么意思吗？
+if (action1() || action2() && action3()) {
+  
 }
 
-//请使用循环和递归实现上面代码所做的事（两份代码）
+//为什么我们应该提倡用下面的写法？
+if (!action1()) {
+  if (action2()) {
+    action3();
+  }
+}
+
+//有的程序员喜欢把本来是多行的代码合并为一行，例如：
+var a = b(c(d()));
+//但是我们不提倡这种做法，其中有一个重要的原因是多行代码更有利于debug查错，请解释一下为什么？
 
