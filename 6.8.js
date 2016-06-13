@@ -15,5 +15,5 @@ function yy(x, y) {
     return [x + 1, y + 2];
 }
 //以下代码有何便利之处？
-var [x, y] = yy(2, 3);
+var [x, y] = yy(2, 3);//请用一般的写法来实现这行代码
 console.log(x, y);//3,5
