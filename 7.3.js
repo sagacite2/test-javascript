@@ -7,7 +7,7 @@ later.date.localTime();
 
 var times = 0;
 //定义一个计划任务，每隔2秒执行一次test函数
-var sched = later.parse.recur().every(2).second(),
+var sched = later.parse.recur().every(2).second();
 var t = later.setInterval(function () {
     test();
 }, sched);//执行setInterval函数时，计划任务已经开始了
